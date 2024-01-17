@@ -18,6 +18,7 @@ void insertatail(int data){
     nptr->nxt = NULL;
     if(head==NULL){
         head = nptr;
+        return;
     }
     struct node *tptr = head;
     while (tptr->nxt!=NULL)
@@ -40,21 +41,7 @@ void deleteatail(){
         tptr->nxt=NULL;
     }
 }
-// void rev(){
-//     struct node *tptr = head;
-//     while(tptr!=NULL){
-//         while (tptr->nxt->data%2==0)
-//         {
-//             struct node *cur = tptr->nxt;
-//             struct node *pur = cur->nxt;
-//             tptr->nxt = cur->nxt;
-//             cur->nxt = pur->nxt;
-//             tptr = pur;
-//         }
-        
-//         tptr=tptr->nxt;
-//     }
-// }
+
 void reverse(){
     struct node *next = NULL;
     struct node *curr = head;
@@ -90,17 +77,11 @@ void print(){
     }
 }
 void main(){
-    insertathead(10);
-    insertathead(20);
-    insertathead(30);
-    // print();
-    insertatail(100);
-    // print();
-    // deleteathead();
-    // deleteathead();
-    // deleteatail();
-    // print();
-    //reverse();
-    sort();
+    insertatail(1);
+    insertatail(2);
+    insertatail(4);
+    insertatail(5);
+    // sort();
+    rev();
     print();
 }

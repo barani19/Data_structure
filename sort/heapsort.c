@@ -10,7 +10,8 @@ void heap(int a[],int n,int i){
     int r = (i*2)+2;
     while(l<n && a[l]>a[larg]){
         larg = l;
-    }    while(r<n && a[r]>a[larg]){
+    }   
+     while(r<n && a[r]>a[larg]){
         larg = r;
     }
     if(larg!=i){
@@ -30,5 +31,9 @@ void main(){
      }
      for(int i=0;i<n;i++) printf("%d ",a[i]);
 }
+
+// leaf node  = (n/2)-1 to n
+// remaining are a internode or root mode
+
 
 

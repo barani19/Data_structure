@@ -53,7 +53,7 @@ void deleteathead(){
 void deleteatail(){
 struct node *tptr = head;
   if(head==NULL) return ;
-  while (tptr->nxt!=NULL)
+  while (tptr->nxt->nxt!=NULL)
   {
      tptr = tptr->nxt;
   }
@@ -71,14 +71,15 @@ void main(){
     insertathead(10);
     insertathead(20);
     insertathead(30);
-    // print();
+    //print();
     insertatail(100);
     // print();
     // deleteathead();
     // deleteathead();
-    // deleteatail();
+    deleteatail();
     // print();
     //reverse();
     insertmid(19,3);
+    deleteatail();
     print();
 }
